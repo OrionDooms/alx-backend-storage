@@ -3,4 +3,4 @@
 -- Requirements: Import the table dump metal_bands.sql.
 SELECT origin, nb_fans
 FROM (SELECT origin, SUM(fans) AS nb_fans FROM metal_bands GROUP BY origin)
-AS subquery ORDER BY nb_fans DESC;
+ORDER BY nb_fans DESC;
