@@ -7,4 +7,4 @@ def update_topics(mongo_collection, name, topics):
     the name in the list"""
     temp_name = {"name": name}
     temp_update = {"$set": {"topics": topics}}
-    result = mongo_collection.update_one(temp_name, temp_update)
+    mongo_collection.update_one(temp_name, temp_update)
