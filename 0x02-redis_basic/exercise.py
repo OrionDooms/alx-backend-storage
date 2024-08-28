@@ -15,6 +15,6 @@ class Cache:
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """The Store method takes in data as argument and returns
         a generate key and string."""
-        temp = str(uuid4())
+        temp = str(uuid.uuid4())
         self._redis.set(name=temp, value=data)
-        return Temp
+        return temp
