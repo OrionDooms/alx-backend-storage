@@ -15,5 +15,5 @@ def top_students(mongo_collection):
             }
 
     sort_objects = {'$sort': {'averageScore': -1}}
-    results = mongo_collection.aggregate([collection_object, sort_objects])
+    results = mongo_collection.aggregate([collection_objects, sort_objects])
     return results
